@@ -52,9 +52,9 @@ int main() {
         for (wchar_t c : input_string) {
             int val = c;
 
-            if (0x3131 < val && val < 0x318E) {
+            if (0x3131 <= val && val <= 0x3163) {
                 wcout << converter.from_bytes(unassembled_hanja(c));
-            } else if (0xAC00 < val && val < 0xD7A3) {
+            } else if (0xAC00 <= val && val <= 0xD7A3) {
                 wcout << converter.from_bytes(assembled_hanja(c));
             } else {
                 wcout << c;
