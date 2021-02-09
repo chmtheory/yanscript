@@ -37,22 +37,6 @@ string unassembled_hanja(wchar_t hanja) {
 }
 
 int main() {
-    string file_name = "unassembled";
-    ifstream in_file(file_name);
-    ofstream out_file(file_name + "_edit");
-
-    string p1;
-    string p2;
-    string line;
-    while (in_file >> p1 >> p2) {
-        line.append("{");
-        line.append(p1);
-        line.append(", \"");
-        line.append(p2);
-        line.append("\"},");
-    }
-    out_file << line << endl;
-
     _setmode(_fileno(stdout), _O_WTEXT);
     _setmode(_fileno(stdin), _O_WTEXT);
 
